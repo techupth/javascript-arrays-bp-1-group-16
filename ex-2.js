@@ -12,7 +12,30 @@ const employees = [
   },
 ];
 // Start coding here
-let alex;
-let alexHobbies;
-let alexAndJamesAge;
+let alex = employees[1]['name'];
+employees[1]['hobbies'].push("Watching basketball");
+let alexHobbies = employees[1]['hobbies'];
+let alexAndJamesAge = employees[0]['age'] + employees[1]['age'];
+
+
+
 const updateEmployees = employees;
+
+
+
+updateEmployees[0]['name'] = "Alicia";
+updateEmployees[0]['age'] = 29;
+updateEmployees[0]['hobbies'] = ["Shopping", "Reading novels"];
+
+updateEmployees[1]['name'] = "Kody";
+updateEmployees[1]['age'] = 19;
+updateEmployees[1]['hobbies'] = ["Computer games", "Wakeboard"];
+
+//ลบ Object ของพนักงานที่ชื่อ “Kody” ใน updateEmployees
+updateEmployees.pop();
+
+console.log(employees);
+console.log(updateEmployees);
+
+
+
