@@ -1,4 +1,4 @@
-// Exercise #2: Editing Employee Array
+
 const employees = [
   {
     name: "James",
@@ -11,8 +11,29 @@ const employees = [
     hobbies: ["Cryptocurrency", "Social media"],
   },
 ];
-// Start coding here
+
+
 let alex;
 let alexHobbies;
 let alexAndJamesAge;
-const updateEmployees = employees;
+const updateEmployees = [...employees]; 
+
+alex = employees.find((employee) => employee.name === "Alex");
+
+
+if (alex) {
+  alexHobbies = alex.hobbies;
+}
+
+
+if (alex) {
+  const james = employees.find((employee) => employee.name === "James");
+  if (james) {
+    alexAndJamesAge = alex.age + james.age;
+  }
+}
+
+console.log(alex);
+console.log(alexHobbies);
+console.log(alexAndJamesAge);
+console.log(updateEmployees);

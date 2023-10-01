@@ -1,4 +1,3 @@
-// Exercise #3: Array of Orders
 
 let orders = [
   {
@@ -43,8 +42,27 @@ let orders = [
   },
 ];
 
-// Start coding here
-let isArray;
+
+let isArray = Array.isArray(orders); 
 let creditCardTypeOfBlindermann;
 let totalPurchaseOfJoannet;
 let totalPurchaseOfDary;
+
+
+let blindermannOrder = orders.find((order) => order.customerName === "Toinette Blindermann");
+if (blindermannOrder) {
+  creditCardTypeOfBlindermann = blindermannOrder.creditCardType;
+}
+
+
+let joannetOrders = orders.filter((order) => order.customerName === "Anjela Joannet");
+totalPurchaseOfJoannet = joannetOrders.reduce((total, order) => total + order.productPrice * order.productQuantity, 0);
+
+
+let daryOrders = orders.filter((order) => order.customerName === "Celia Dary");
+totalPurchaseOfDary = daryOrders.reduce((total, order) => total + order.productPrice * order.productQuantity, 0);
+
+console.log(isArray); 
+console.log(creditCardTypeOfBlindermann); 
+console.log(totalPurchaseOfJoannet); 
+console.log(totalPurchaseOfDary); 
